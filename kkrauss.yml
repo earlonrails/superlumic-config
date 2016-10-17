@@ -4,7 +4,7 @@
   connection: local
 
   tasks:
-    - name: install personal cask applications
+    - name: install kkrauss cask applications
       when: ansible_distribution == 'MacOSX'
       homebrew_cask: name={{item}} state=present
       with_items:
@@ -16,7 +16,7 @@
         - audacity
         - adobe-air
         - blender
-        - dockertoolbox
+        - docker
         - caffeine
         - chefdk
         - chromium
@@ -27,7 +27,7 @@
         - firefox
         - fluid
         - gimp
-        - github
+        - github-desktop
         - google-chrome-canary
         - google-chrome
         - handbrake
@@ -72,7 +72,6 @@
         - atk
         - autoconf
         - automake
-        - brew-cask
         - cassandra
         - cmake
         - coreutils

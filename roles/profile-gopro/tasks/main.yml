@@ -6,7 +6,7 @@
     - hipchat
     - google-drive
     - keepingyouawake
-    - dockertoolbox
+    - docker
     - firefox
     - iterm2
     - mou
@@ -17,7 +17,6 @@
   when: ansible_distribution == 'MacOSX'
   homebrew: name={{item}} state=latest
   with_items:
-    - brew-cask
     - cassandra
     - elasticsearch
     - git
