@@ -4,6 +4,28 @@
   connection: local
 
   tasks:
+    - name: install kevin apt-get applications
+      apt: name={{item}} state=latest
+      sudo: yes
+      with_items:
+        - ant
+        - arping
+        - autoconf
+        - automake
+        - cmake
+        - coreutils
+        - fping
+        - gawk
+        - git
+        - htop
+        - jmeter
+        - mongodb
+        - npm
+        - openssl
+        - pbzip2
+        - redis-server
+        - tmux
+
     - name: install kevin npm applications
       npm: name={{item}} state=latest global=yes
       with_items:
@@ -28,62 +50,6 @@
         - protractor
         - readable-stream
         - yo
-    - name: install kevin apt-get applications
-      apt: name={{item}} state=latest
-      sudo: yes
-      with_items:
-        - ant
-        - arping
-        - autoconf
-        - automake
-        - cmake
-        - coreutils
-        - findutils
-        - fontconfig
-        - fping
-        - gawk
-        - git
-        - git-extras
-        - git-flow
-        - gmp
-        - gnutls
-        - gtk+
-        - gtksourceview
-        - htop
-        - hub
-        - jmeter
-        - jpeg
-        - lame
-        - leiningen
-        - lftp
-        - lua
-        - lzip
-        - mad
-        - memcached
-        - mercurial
-        - mongodb
-        - mutt
-        - nettle
-        - nginx-full
-        - node
-        - openssl
-        - ossp-uuid
-        - pango
-        - pbzip2
-        - postgresql
-        - pstree
-        - pv
-        - redis
-        - sbt
-        - scala
-        - selenium-server-standalone
-        - shmux
-        - sox
-        - sqlite
-        - tmux
-        - watch
-        - wget
-        - zeromq
 
   vars:
     - computername: art3mis
