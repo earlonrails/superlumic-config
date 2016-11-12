@@ -1,9 +1,8 @@
 ---
 - name: install cask applications for all users
-  when: ansible_distribution == 'MacOSX'
   homebrew_cask: name={{item}} state=present
   with_items:
-    - hipchat
+    - slack
     - google-drive
     - keepingyouawake
     - docker
@@ -14,30 +13,24 @@
     - shiftit
 
 - name: install developer brew applications
-  when: ansible_distribution == 'MacOSX'
   homebrew: name={{item}} state=latest
   with_items:
-    - cassandra
     - elasticsearch
     - git
     - node
-    - nginx-full
     - postgresql
     - redis
     - rhino
     - selenium-server-standalone
 
-- name: download gvm
-  when: ansible_distribution == 'MacOSX'
-  get_url:
-    url: https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer
-    dest: /tmp/gvm-install.sh
-    mode: 0440
-- name: install gvm
-  when: ansible_distribution == 'MacOSX'
-  command: command -v gvm >/dev/null 2>&1 || /usr/bin/env bash /tmp/gvm-install.sh
-
-- name: setting path
-  when: ansible_distribution == 'MacOSX'
-  sudo: no
-  action: shell source /Users/{{ansible_user_id}}/.gvm/scripts/gvm
+# - name: download gvm
+#   get_url:
+#     url: https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer
+#     dest: /tmp/gvm-install.sh
+#     mode: 0440
+# - name: install gvm
+#   command: command -v gvm >/dev/null 2>&1 || /usr/bin/env bash /tmp/gvm-install.sh
+#
+# - name: setting path
+#   sudo: no
+#   action: shell source /Users/{{ansible_user_id}}/.gvm/scripts/gvm
