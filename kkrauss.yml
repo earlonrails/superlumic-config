@@ -27,15 +27,12 @@
         - fluid
         - gimp
         - github-desktop
-        - google-chrome-canary
         - google-chrome
         - handbrake
         - hedgewars
         - hex-fiend
-        - hipchat
         - iterm2
         - kismac
-        - macfusion
         - mongohub
         - mou
         - openoffice
@@ -48,7 +45,6 @@
         - seil
         - shiftit
         - soundflower
-        - sourcetree
         - spotify
         - sqlitebrowser
         - steam
@@ -104,7 +100,6 @@
         - gtk+
         - gtksourceview
         - harfbuzz
-        - headers-more-nginx-module
         - htop-osx
         - hub
         - icu4c
@@ -115,7 +110,6 @@
         - jpeg
         - lame
         - leiningen
-        - lftp
         - libevent
         - libffi
         - libgpg-error
@@ -136,7 +130,6 @@
         - mongodb
         - mutt
         - nettle
-        - nginx-full
         - node
         - openssl
         - ossp-uuid
